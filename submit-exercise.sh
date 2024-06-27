@@ -1,6 +1,8 @@
 #! /bin/sh
-git switch main
-git pull origin main
-git branch $1
-git branch --list
 git switch $1
+git status
+git add $1
+git status
+git commit -m "Completed $1 exercise."
+git push origin $1
+git switch main
